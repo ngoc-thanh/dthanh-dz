@@ -1,7 +1,7 @@
-import { useEffect,useState } from "../lib";
 
 
 const project = () => {
+  
   return `
   <section id="portfolio">
   <div class="container mt-3">

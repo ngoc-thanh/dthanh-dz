@@ -1,6 +1,13 @@
+import header from "../components/header";
+import about from "./about";
+import contact from "./contact";
+import footer from "./footer";
+import project from "./project";
+import skills from "./skills";
 
 const home = () => {
   return `
+  ${header()}
   <section class="bgimage" id="home">
   <div class="container-fluid">
       <div class="row">
@@ -11,7 +18,11 @@ const home = () => {
       </div>
   </div>
 </section>
-
+  ${about()}
+  ${skills()}
+  ${project()}
+  ${contact()}
+  ${footer()}
   `
 }
 

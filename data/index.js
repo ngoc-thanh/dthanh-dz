@@ -1,8 +1,8 @@
 const menus = [
-    { name: "Home", path: "#" },
+    { name: "Home", path: "#home" },
     { name: "About", path: "#about" },
-    { name: "Skills", path: "#skill" },
-    { name: "Project", path: "#project" },
+    { name: "Skills", path: "#services" },
+    { name: "Project", path: "#portfolio" },
     { name: "Contact", path: "#contact" },
 
 ];
