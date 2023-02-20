@@ -6,7 +6,7 @@ const about = () => {
       <h1 class="text-center">About Me</h1>
       <div class="row mt-4">
           <div class="col-lg-4">
-              <img src="https://cdn.baogiaothong.vn/upload/2-2022/images/2022-05-25/2-1653445668-926-width740height481.jpg" class= "imageAboutPage" alt="">
+          <img src="img/z4114048927435_46b75a52d898f22975c2095d84c748f0.jpg" class= "imageAboutPage" alt="">
           </div>
 
           <div class="col-lg-8">
@@ -15,7 +15,7 @@ const about = () => {
               </p>
               <div class="row mt-3">
                   <div class="col-md-6">
-                      <ul>
+                      <ul style="list-style-type: none;">
                           <li>Name: Đặng Ngọc Thanh</li>
                           <li>Age: 19</li>
                           <li>Occupation: Web Developer</li>

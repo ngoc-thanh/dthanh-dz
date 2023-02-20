@@ -1,7 +1,7 @@
 import nav from "./nav";
 
 const header = () => {
-  return`
+  return `
     <header>${nav()}</header>
   `
 }

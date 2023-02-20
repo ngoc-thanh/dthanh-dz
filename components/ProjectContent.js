@@ -2,7 +2,7 @@ const ProjectContent = ({ projectInCategory, projects, categories }) => {
     return `
       ${projectInCategory.projects ? `
         ${projectInCategory.projects.map((project) => `
-        <div class="cart">
+        <div class="cart col-lg-4">
         <a href="${project.url}" style="text-decoration: none;color: var(--color-main);
         font-family: 'Poppins';
         ">

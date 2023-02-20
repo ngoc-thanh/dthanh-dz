@@ -29,7 +29,7 @@ const contact = () => {
                       <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
                   </div>
               </form>
-              <button type="button" class="btn btn-success mt-3">Contact Me</button>
+              <button type="button" class="btn btn-success mt-3 style="color:red">Contact Me</button>
               
           </div>
 

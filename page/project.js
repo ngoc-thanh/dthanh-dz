@@ -1,52 +1,45 @@
-
+import header from "../components/header"
+import { useEffect, useState } from "../lib"
+import { getCategories } from "./admin/config/categories";
+import { getProjects } from "./admin/config/projects";
+import Category from "../components/Category";
+import ProjectContent from "../components/ProjectContent";
 
 const project = () => {
+    const [categories, setCategories] = useState([]);
+    const [projects, setProjects] = useState([]);
+    const [projectInCategory, setProjectInCategory] = useState([]);
+    const [id, setId] = useState(null);
+    useEffect(() => {
+      getCategories().then(({ data }) => setCategories(data))
+    }, [])
+    useEffect(() => {
+      getProjects().then(({ data }) => setProjects(data));
+    }, [])
+    useEffect(() => {
   
+    }, [id])
+    const onHandleClick = async (id) => {
+      if (id != 0) {
+  
+        const data = await (await fetch(`http://localhost:3000/categories/${id}?_embed=projects`)).json();
+        setProjectInCategory(data)
+      } else {
+        getProjects().then(({ data }) => setProjectInCategory(data))
+      }
+    }
   return `
   <section id="portfolio">
-  <div class="container mt-3">
-      <h1 class="text-center">Project</h1>
-      <div class="row">
-          <div class="col-lg-4 mt-4">
-              <div class="card">
-                  <img class="card-img-top" src="" alt="Card image" style="width:100%">
-                  <div class="card-body">
-                      <h4 class="card-title">Pr1</h4>
-                      <p class="card-text">abc.</p>
-                      <div class="text-center">
-                          <a href="#" class="btn btn-success">Link</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-lg-4 mt-4">
-              <div class="card portfolioContent">
-                  <img class="card-img-top" src="" alt="Card image" style="width:100%">
-                  <div class="card-body">
-                      <h4 class="card-title">Pr2</h4>
-                      <p class="card-text">abc.</p>
-                      <div class="text-center">
-                          <a href="#" class="btn btn-success">Link</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-lg-4 mt-4">
-              <div class="card portfolioContent">
-                  <img class="card-img-top" src="" alt="Card image" style="width:100%">
-                  <div class="card-body">
-                      <h4 class="card-title">Pr3</h4>
-                      <p class="card-text">abc.</p>
-                      <div class="text-center">
-                          <a href="#" class="btn btn-success">Link</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-   
+  <div id="project">
+  <div class="circle-s-project"></div>
+  <div class="container">
+  <h1 class="text-center">Projects</h1>
+    ${Category({ categories, onClick: onHandleClick })}
+    <div class="carts">
+    ${ProjectContent({ categories, projects, projectInCategory })}
+    </div>
+  </div>
+</div>
 </section>
   `
 }

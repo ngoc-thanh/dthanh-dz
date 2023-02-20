@@ -1,4 +1,28 @@
 {
-  "projects": [],
-  "categories": []
+  "projects": [
+    {
+      "name": "Du an 2",
+      "url": "https://github.com/ngoc-thanh/dthanh-dz",
+      "gallery": [
+        "https://res.cloudinary.com/dce7zgzuf/image/upload/v1676862634/ECMA/jx1gdxbu8xaxtbjujpt2.jpg"
+      ],
+      "galleryProjects": [
+        "https://res.cloudinary.com/dce7zgzuf/image/upload/v1676862650/ECMA/bhcnzuwzvsja3q2km4ua.jpg"
+      ],
+      "categoryId": 1,
+      "date": "2023-02-16",
+      "description": "abc",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "HTML/CSS"
+    },
+    {
+      "id": 2,
+      "name": "PHP"
+    }
+  ]
 }
