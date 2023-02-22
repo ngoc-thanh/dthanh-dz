@@ -7,6 +7,7 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
+  background-color: #252740;
 }
 
 .bgimage {
@@ -93,12 +94,16 @@
   cursor: pointer;
 }
 
+.card-title {
+  text-align: center;
+}
+
 .fa-facebook:hover,
 .fa-instagram:hover,
 .fa-twitter:hover,
 .fa-linkedin:hover,
 .fa-twitch:hover {
-  color: #805700cb;
+  color: #7c8000cb;
 }
 
 .fab {

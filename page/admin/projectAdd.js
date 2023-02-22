@@ -70,13 +70,13 @@ const projectAdd = () => {
         <div>Name:</div>   
         <input type="text" class="form-control" id="form-name">
         <div>Url:</div>   
-        <input type="url" class="form-control" id="form-url" placeholder="https://example.com"
+        <input type="url" class="form-control" id="form-url" placeholder="https://******@.com"
         pattern="https://.*" size="30">
         <div>Image:</div>   
         <input type="file" class="form-img">
         <div>Gallery project:</div>   
         <input type="file" class="form-imgs" multiple>
-        <div>The loai:</div>   
+        <div>Category:</div>   
         <div class="btn-group-toggle" data-toggle="buttons">
         <select id="my-select" class="form-control" name="">
             ${category.map((item) => `
@@ -84,9 +84,9 @@ const projectAdd = () => {
             `).join("")}
         </select>
         </div>
-        <div>Ngay tao:</div>   
+        <div>Date:</div>   
         <input type="date" class="form-date">
-        <div>mo ta:</div>   
+        <div>Description:</div>   
         <textarea name="" id="dsc" cols="30" rows="10" class="dsc"></textarea>      
         <button class="btn btn-success">ADD</button>
         </form>
